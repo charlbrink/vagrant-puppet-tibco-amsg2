@@ -1,0 +1,1 @@
+class { 'amsg2' }
