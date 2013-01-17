@@ -26,8 +26,7 @@ The method I used was to manually install TIBCO Enterprise Message Service (EMS)
 **Do not run the TIBCO Configuration tool as part of the installtion!**
 
 Using [FPM](https://github.com/jordansissel/fpm/wiki) one can easily create rpms as follows:
-* fpm -s dir -t rpm -n "amsg" -v 3.2.0 /home/vagrant/amsg_home /home/vagrant/amsg_data to create the file amsg-3.2.0-1.x86_64.rpm and
-* fpm -s dir -t rpm -n "ems" -v 6.3 /home/vagrant/ems_home /home/vagrant/ems_data to create the file ems-6.3-1.x86_64.rpm
+* fpm -s dir -t rpm -n "amx" -v 2.3.2 /local to create the file amx-2.3.2-1.x86_64.rpm
 
 FPM requires package rpm-build to be installed (sudo yum install rpm-build) to build an rpm.
 
