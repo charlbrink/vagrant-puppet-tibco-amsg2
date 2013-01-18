@@ -36,6 +36,11 @@ node default {
     content => template('wgetrc.erb'),
   }
 
+  file { '/etc/hosts' :
+    path    => '/etc/hosts',
+    content => template('hosts.erb'),
+  }
+
   # Install "Desktop" group - mandatory
   $desktop_mandatory_packages = [ 'NetworkManager', 'NetworkManager-gnome', 'alsa-plugins-pulseaudio', 'at-spi',
               'control-center', 'dbus', 'gdm', 'gdm-user-switch-applet', 'gnome-panel', 'gnome-power-manager',
@@ -66,7 +71,7 @@ node default {
 #  }
 
   # Install extra convenience packages
-  $extra_packages = [ 'subversion', 'gedit', 'man' ]
+  $extra_packages = [ 'subversion', 'gedit', 'man', 'file-roller', 'unzip' ]
   package { $extra_packages:
     ensure  => present,
     require => File['/etc/yum.conf'],
